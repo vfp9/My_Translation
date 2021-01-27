@@ -251,27 +251,27 @@ cPassword - 你想用于保护压缩文件的密码。
 
 ZipFolder() 函数用于ZipOpen() 函数和 ZipClose() 函数之间。通常情况下，使用 ZipOpen() 来创建/打开压缩文件，使用 ZipFile()、ZipFileRelative()和ZipFolder() 函数来压缩文件 和/或 文件夹，然后使用 ZipClose() 函数关闭压缩文件。
 ****
-函数 UnzipString()
+#### 函数 UnzipString()
 
-声明： UnzipString(cString)
+##### 声明： UnzipString(cString)
 
-参数：
+##### 参数：
 
 cString - 你想解压的被压缩的字符串。
 
-返回值：
+##### 返回值：
 
 字符型 - 解压后的字符串。
 
-注释： 
+##### 注释： 
 
 这个函数只能解压由 ZipString() 函数或 zlib 中 compress() 函数、compress2() 函数压缩的字符串。
+****
+#### 函数 UnzipQuick()
 
-函数 UnzipQuick()
+##### 声明： UnzipQuick(cZipFileName, cOutputFolderName[, lIgnorePaths[, cPassword]])
 
-声明： UnzipQuick(cZipFileName, cOutputFolderName[, lIgnorePaths[, cPassword]])
-
-参数：
+##### 参数：
 
 cZipFileName - 你想解压的带完整路径的文件名。
 
@@ -281,67 +281,67 @@ cPassword - 用于解压文件的密码。
 
 lIgnorePaths - 如果你想忽略压缩文件中的相对路径，传递参数 .T. 。默认值是 .F. ，这意味着解压后保留文件的相对路径。
 
-返回值： 
+##### 返回值： 
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-注释：
+##### 注释：
 
 压缩文件中的路径及文件会被解压到参数 cZipFileName 参数指定的文件夹下。
+****
+#### 函数 UnzipOpen()
 
-函数 UnzipOpen()
+##### 声明： UnzipOpen(cZipFileName)
 
-声明： UnzipOpen(cZipFileName)
-
-参数：
+##### 参数：
 
 cZipFileName - 你想解压的文件名或带完整路径的文件名。
 
-返回值：
+##### 返回值：
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-注释：
+##### 注释：
 
 UnzipOpen() 函数与 UnZipClose() 函数配合使用。通常是这样来调用这一系列函数：使用 UnzipOpen() 打开压缩文件，使用 Unzip()、UnzipTo()、UnzipByIndex()、UnzipFile() 函数来解压文件 和/或 文件夹，然后使用 UnzipClose() 函数关闭压缩文件。
+****
+#### 函数 UnzipClose()
 
-函数 UnzipClose()
+##### 声明：UnzipClose()
 
-声明：UnzipClose()
+##### 参数： None
 
-参数： None
-
-返回值：
+##### 返回值：
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-注释： 
+##### 注释： 
 
 UnzipClose() 函数必须在 UnzipOpen() 函数后调用。通常是这样来调用这一系列函数：使用 UnzipOpen() 打开压缩文件，使用 Unzip()、UnzipTo()、UnzipByIndex()、UnzipFile() 函数来解压文件 和/或 文件夹，然后使用 UnzipClose() 函数关闭压缩文件。
+****
+#### 函数 Unzip()
 
-函数 Unzip()
+##### 声明：Unzip(lIgnorePaths[, cPassword])
 
-声明：Unzip(lIgnorePaths[, cPassword])
-
-参数：
+##### 参数：
 
 lIgnorePaths - 如果你想忽略压缩文件中的相对路径，就传递参数 .T. 。默认值是 .F. ，意味着保留相对路径。
 
 cPassword - 用于解压缩文件的密码。
 
-返回值：
+##### 返回值：
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-注释：
+##### 注释：
 
 Unzip() 函数用于 UnzipOpen() 函数和 UnzipClose() 之间来解压整个压缩文件。其中的文件和文件夹将被解压到压缩文件所在的文件夹中（如果不使用前面的 UnzipSetFolder()函数）。通常是这样来调用这一系列函数：使用 UnzipOpen() 打开压缩文件，使用 Unzip()、UnzipTo()、UnzipByIndex()、UnzipFile() 函数来解压文件 和/或 文件夹，然后使用 UnzipClose() 函数关闭压缩文件。
+****
+#### 函数 UnzipTo()
 
-函数 UnzipTo()
+##### 声明： UnzipTo(cOutputFolderName[, lIgnorePaths[, cPassword]])
 
-声明： UnzipTo(cOutputFolderName[, lIgnorePaths[, cPassword]])
-
-参数：
+##### 参数：
 
 cOutputFolderName - 压缩文件要被释放到的文件夹名。
 
@@ -349,19 +349,19 @@ lIgnorePaths - 如果你想忽略压缩文件中的相对路径，就传递参�
 
 cPassword - 用于解压文件的密码。
 
-返回值：
+##### 返回值：
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-注释：
+##### 注释：
 
 UnzipTo() 函数用于 UnzipOpen() 函数和 UnzipClose() 之间。这个函数与 UnzipSetFolder() 函数及 Unzip() 函数很相似。通常是这样来调用这一系列函数：使用 UnzipOpen() 打开压缩文件，使用 Unzip()、UnzipTo()、UnzipByIndex()、UnzipFile() 函数来解压文件 和/或 文件夹，然后使用 UnzipClose() 函数关闭压缩文件。
+****
+#### 函数： UnzipFile()
 
-函数： UnzipFile()
+##### 声明：UnzipFile(cOutputFolderName[, lIgnorePaths[, cPassword]])
 
-声明：UnzipFile(cOutputFolderName[, lIgnorePaths[, cPassword]])
-
-参数：
+##### 参数：
 
 cOutputFolderName - 当前包含在压缩文件中的文件被解压后所存放的文件夹名。
 
@@ -369,21 +369,21 @@ lIgnorePaths - 如果你想忽略压缩文件中的相对路径，就传递参�
 
 cPassword - 用于解压文件的密码。
 
-返回值：
+##### 返回值：
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-注释：
+##### 注释：
 
 UnzipFile() 函数用于 UnzipOpen() 函数和 UnzipClose() 之间，用来解压在压缩文件中的当前所选择的要解压的文件。UnzipFile() 函数需要与 UnzipGotoTopFile（）、UnzipGotoNextFile（）、UnzipGotoFileByName（）以及 UnzipGotoFileByIndex（）协同使用。你可以认为压缩文件中的内容是一个表中的记录。从这个角度出发，UnzipGotoTopFile（）、UnzipGotoNextFile（）、UnzipGotoFileByName（）和 UnzipGotoFileByIndex（）就像是移动记录指针，UnzipFile（）函数用于解压当前记录指针所指向的文件。
 
 参数 cPassword 通常情况下对于压缩文件中的文件是一样的，然而它并不需要一样。谨记一点，在一个压缩文件中，可以对不同的文件指定密码，并且，当你需要解压这样的存档文件时，你需要随之更改参数 cPassword 的值。
+****
+#### 函数 UnzipByIndex()
 
-函数 UnzipByIndex()
+##### 声明： UnzipByIndex(nIndex[, cOutputFolderName[,lIgnorePaths, cPassword]]])
 
-声明： UnzipByIndex(nIndex[, cOutputFolderName[,lIgnorePaths, cPassword]]])
-
-参数：
+##### 参数：
 
 nIndex - 被解压的文件的索引号。
 
@@ -393,146 +393,147 @@ lIgnorePaths - 如果你想忽略压缩文件中的相对路径，就传递参�
 
 cPassword - 用于解压文件的密码。
 
-返回值：
+##### 返回值：
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-注释： 
+##### 注释： 
 
 UnzipByIndex() 函数用于 UnzipOpen() 函数和 UnzipClose() 函数之间，通过压缩文件中的位置（索引）来解压文件。UnzipByIndex() 需要与函数 UnzipFileCount（）函数协同使用。你可以认为压缩文件中的内容是一个表中的记录。从这个角度来讲，你可以认为使用  UnzipFileCount（）函数获得的是表中的记录数，并且，UnzipByIndex（）可以使用记录号来解压一个具体的文件。
 
 参数 cPassword 通常情况下对于压缩文件中的文件是一样的，然而它并不需要一样。谨记一点，在一个压缩文件中，可以对不同的文件指定密码，并且，当你需要解压这样的存档文件时，你需要随之更改参数 cPassword 的值。
+****
+#### 函数 UnzipFileCount()
 
-函数 UnzipFileCount()
+##### 声明：UnzipFileCount()
 
-声明：UnzipFileCount()
+##### 参数： 无
 
-参数： 无
-
-返回值：
+##### 返回值：
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-注释：
+##### 注释：
 
 UnzipFileCount() 函数用于 UnzipOpen() 函数和 UnzipClose() 函数之间，用以找到包含在压缩文件中的文件数目。它事实上没有解压任何文件。UnzipFileCount() 函数与UnzipByIndex（）函数协同使用。你可以认为压缩文件中的内容是一个表中的记录。从这个角度来讲，你可以认为使用 UnzipFileCount（）函数获得的是表中的记录数，并且，UnzipByIndex（）可以使用记录号来解压一个具体的文件。
+****
+#### 函数 UnzipSetFolder()
 
-函数 UnzipSetFolder()
+##### 声明： UnzipSetFolder(cOutputFolderName)
 
-声明： UnzipSetFolder(cOutputFolderName)
-
-参数： 
+##### 参数： 
 
 cOutputFolderName - 压缩文件解压后存放的文件夹名。
 
-返回值： 
+##### 返回值： 
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-注释：
+##### 注释：
 
 UnzipSetFolder() 函数用于UnzipOpen() 函数和 UnzipClose() 函数之间，用于设置存放解压出的内容的文件夹。它事实上并不解压任何东西。通常是这样来调用这一系列函数：使用 UnzipSetFolder() 设置输出文件夹，使用 Unzip()、UnzipTo()、UnzipByIndex()、UnzipFile() 函数来解压文件 和/或 文件夹，然后使用 UnzipClose() 函数关闭压缩文件。
+****
+#### 函数 UnzipGotoTopFile()
 
-函数 UnzipGotoTopFile()
+##### 声明： UnzipGotoTopFile([cExtension])
 
-声明： UnzipGotoTopFile([cExtension])
-
-参数： 
+##### 参数： 
 
 cExtension - 文件扩展名，用以过滤相同的文件类型。对所有其他类型文件不予理睬，并且仅仅在压缩文件中选择被指定的文件类型中的第一个文件。
 
-返回值：
+##### 返回值：
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-注释：
+##### 注释：
 
 UnzipGotoTopFile() 函数用于 UnzipOpen() 函数和 UnzipClose() 函数之间，用于在当前打开的压缩文件中选择一个特定的文件。UnzipGotoTopFile() 需要与 UnzipFile（）协同使用以便从压缩文件中解压一个特定的文件。利用可选参数，你可以选择特定文件类型中的第一个文件。你可以认为压缩文件中的内容是一个表中的记录。从这个角度来讲，你可以认为使用 UnzipGotoTopFile（）、UnzipGotoNextFile()、UnzipGotoFileByName（）和 UnzipGotoFileByIndex（）函数是用来移动记录指针的。并且 UnzipFile（）函数用于解压当前记录指针所指向的文件。
+****
+#### 函数 UnzipGotoNextFile()
 
-函数 UnzipGotoNextFile()
+##### 声明： UnzipGotoNextFile([cExtension])
 
-声明： UnzipGotoNextFile([cExtension])
-
-参数：
+##### 参数：
 
 cExtension - 文件扩展名，用以过滤相同的文件类型。对所有其他类型文件不予理睬，并且仅仅在压缩文件中选择被指定的文件类型中的下一个文件。
 
-返回值：
+##### 返回值：
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-注释：
+##### 注释：
 
 UnzipGotoNextFile() 函数用于 UnzipOpen() 函数和 UnzipClose() 函数之间，用于在当前打开的压缩文件中选择一个特殊的文件。 UnzipGotoNextFile() 需要与 UnzipFile（）函数协同工作，从压缩文件中解压一个指定的文件。通过使用可选参数你可以选择特定文件类型的下一个文件。你可以认为压缩文件中的内容是一个表中的记录。从这个角度来讲，你可以认为使用 UnzipGotoTopFile（）、UnzipGotoNextFile()、UnzipGotoFileByName（）和 UnzipGotoFileByIndex（）函数是用来移动记录指针的。并且 UnzipFile（）函数用于解压当前记录指针所指向的文件。
+****
+#### 函数 UnzipGotoFileByName()
 
-函数 UnzipGotoFileByName()
+##### 声明： UnzipGotoFileByName(cFileName[, lIgnoreFilePath])
 
-声明： UnzipGotoFileByName(cFileName[, lIgnoreFilePath])
-
-参数：
+##### 参数：
 
 cFileName - 你想要选择的压缩文件中的文件名。你可以指定一个相对路径来加快搜索。
 
 lIgnoreFilePath - 如果你仅仅想找到特定的文件，你可以传递参数 .T. ，并且会忽略文件的相对路径。当前压缩文件中与参数 cFileName 匹配的第一个文件会被选择。
 
-返回值： 
+##### 返回值： 
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-注释：
+##### 注释：
 
 UnzipGotoFileByName() 函数用于 UnzipOpen() 函数和 UnzipClose() 函数之间，用于在当前打开的压缩文件中通过文件名 和/或 相对路径来选择一个特定的文件。UnzipGotoFileByName() 与 UnzipFile（）协同工作可以从打开的压缩文件中，解压一个特定的文件。你可以认为压缩文件中的内容是一个表中的记录。从这个角度来讲，你可以认为使用 UnzipGotoTopFile（）、UnzipGotoNextFile()、UnzipGotoFileByName（）和 UnzipGotoFileByIndex（）函数是用来移动记录指针的。并且 UnzipFile（）函数用于解压当前记录指针所指向的文件。
+****
+#### 函数 UnzipGotoFileByIndex()
 
-函数 UnzipGotoFileByIndex()
+##### 声明： UnzipGotoFileByIndex([nIndex])
 
-声明： UnzipGotoFileByIndex([nIndex])
-
-参数：
+##### 参数：
 
 nIndex - 要选择的文件的索引号。
 
-返回值：
+##### 返回值：
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-Remarks:
+##### Remarks:
 
 UnzipGotoFileByIndex() 函数用于 UnzipOpen() 函数和 UnzipClose() 函数之间，用于在当前打开的压缩文件中通过存在在压缩文件中的位置来选择一个特定的文件。UnzipGotoFileByIndex() 函数与 UnzipFile（）函数协同工作用于解压当前压缩文件中的特定文件。你可以认为压缩文件中的内容是一个表中的记录。从这个角度来讲，你可以认为使用 UnzipGotoTopFile（）、UnzipGotoNextFile（）、UnzipGotoFileByName（）和 UnzipGotoFileByIndex（）函数是用来移动记录指针。UnzipFile() 函数用于当前记录指针所指向的文件。
+****
+#### 函数 UnzipAFileInfoByIndex()
 
-函数 UnzipAFileInfoByIndex()
+##### 声明： UnzipAFileInfoByIndex(cArrayName, nIndex)
 
-声明： UnzipAFileInfoByIndex(cArrayName, nIndex)
-
-参数： 
+##### 参数： 
 
 cArrayName - 要创建的包含文件信息的VFP数组名。
 
 nIndex - 你想返回的相关文件信息的索引号。
 
-返回值： 
+##### 返回值： 
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
 所创建的数组有13行（元素）。每一行都包含文件不同方面的信息。下表描述了每一行所包含的内容和数据类型：
 
-行	数组内容	数据类型 
-1	File Name （文件名）	Character
-2	Comment （注释）	Character
-3	Version （版本号）	Numeric
-4	Version Needed （版本号）	Numeric
-5	Flags （标志）	Numeric
-6	Compression Method （压缩方法）	Numeric
-7	DOS Date （日期）	Datetime
-8	CRC （循环冗余校验）	Numeric
-9	Compressed Size （压缩后的文件大小）	Numeric
-10	Uncompressed Size （原始的文件大小）	Numeric
-11	Internal Attribute （内在属性）	Numeric
-12	External Attribute （外部属性）	Numeric
-13	Folder （文件夹）	Logical
-注释： 
+|行	|数组内容	|数据类型 |
+|----------|----------------------|----------|
+|1	|File Name （文件名）	|Character|
+|2	|Comment （注释）	|Character|
+|3	|Version （版本号）	|Numeric|
+|4	|Version Needed （版本号）	|Numeric|
+|5	|Flags （标志）	|Numeric|
+|6	|Compression Method （压缩方法）	|Numeric|
+|7	|DOS Date （日期）	|Datetime|
+|8	|CRC （循环冗余校验）	|Numeric|
+|9	|Compressed Size （压缩后的文件大小）	|Numeric|
+|10	|Uncompressed Size （原始的文件大小）	|Numeric|
+|11	|Internal Attribute （内在属性）	|Numeric|
+|12	|External Attribute （外部属性）	|Numeric|
+|13	|Folder （文件夹）	|Logical|
+##### 注释： 
 
 所创建的数组的名字由参数 cArrayName 决定。如果同名数组存在则释放数组并重新创建。UnzipAFileInfoByIndex() 函数用于 UnzipOpen() 函数和 UnzipClose() 之间，用来显示一个特定文件的信息。该文件可以通过存储在当前压缩文件的位置找到。你可以认为压缩文件中的内容是一个表中的记录。从这个角度来讲，你可以使用 UnzipAFileInfoByIndex（）函数来查找文件，并且找到压缩文件中某个记录的信息。
-
+****
 函数 UnzipAFileInfo()
 
 声明： UnzipAFileInfo(cArrayName)
