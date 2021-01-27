@@ -100,22 +100,22 @@ SET LIBRARY TO
 
 #### 函数 ZipString()
 
-声明：ZipString(cString[, nLevel])
+##### 声明：ZipString(cString[, nLevel])
 
-参数：
+##### 参数：
 
 cString - 你想要压缩的字符串
 
 nLevel - 使用1-9中哪种压缩级别 (1 是最快的压缩速度，9 是最大程度的压缩)。这个参数的默认值是 6 。
 
-返回值：
+##### 返回值：
 
 字符型 - 传入字符串的压缩版本。
 
-注释：
+##### 注释：
 
 这个函数对于C/S程序得到字符串特别有用（例如备注字段、字符型字段以及XML），它可以在网络传输过程中对这些数据进行压缩，然后在另一端解压缩（使用函数 UnzipString）。
-
+---
 #### 函数 ZipFileQuick()
 
 ##### 声明： ZipFileQuick(cFileName, cPassword)
@@ -133,7 +133,7 @@ cPassword - 你所想使用的用于保护压缩文件的密码。
 ##### 注释：
 
 所创建的压缩文件，具有和传入的文件同样的名字，其扩展名为“.zip”。
-
+---
 #### 函数 ZipFolderQuick()
 
 声明： ZipFileQuick(cFolderName[, lIgnorePaths[, cPassword)
