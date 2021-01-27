@@ -1,22 +1,24 @@
 # Why doesn't Miscrofost Excel Spreadsheet control work?
 时间：2007年4月5日，星期四，下午1点26分
+
 作者：Calvin_Hsia
+
 翻译：xinjie
 
  我们收到一个BUG报告：
 
-# 问题重现：
+## 问题重现：
 打开表单设计器并创建一个新表单。
 
 在表单中添加 ActiveX 控件：Microsoft Office Spreadsheet 11.0
 
-## 实际结果：
+### 实际结果：
 OLE错误编号 0x80040202: Unknown COM status code.
 
-## 我们想要的结果：
+### 我们想要的结果：
 在表单中添加一个 Microsoft Office Spreadsheet 11.0 控件。
  
-
+---
 毫无疑问，我们会遇到这样的问题。
  
 发生什么意外的事情了呢？
