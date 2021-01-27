@@ -17,7 +17,8 @@
       在 Task Pane(任务面板) 中有更多的示例：打开任务面板，选择 Solution Samples(解决方案示例) 中的 New in Visual Foxpro 9(VFP9 的新增功能),里面有一个示例 “Binding to Windows Message Events”(绑定 Windoes 消息事件)
  
       (关于拉斯维加斯的屏幕保护程序Demo，可以参看博客 http://blogs.msdn.com/calvin_hsia/archive/2004/10/04/237723.aspx)
- 
+
+```foxpro 
 #define GWL_WNDPROC         (-4)
 #define WM_USER                         0x0400
 #define WM_USER_SHNOTIFY            WM_USER+10
@@ -265,3 +266,4 @@ DEFINE CLASS myimage as Image
       PROCEDURE dblclick
             ?PROGRAM()
 ENDDEFINE
+```
