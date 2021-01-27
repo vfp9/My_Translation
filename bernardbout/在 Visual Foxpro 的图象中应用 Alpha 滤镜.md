@@ -65,7 +65,7 @@ loBitmap = .Bitmap.New(300,270)
 * 绘制一个黄色的矩形
 loGfx.FillRectangle(.SolidBrush.New(.Color.FromRGB(254,254,228)), 10,9,278,249)
 ```
-**切记，要改变最后两个值来适应你定义的图片尺寸 - **,278,249)
+***切记，要改变最后两个值来适应你定义的图片尺寸*** - ,278,249)
 
 Cesar 的代码不仅仅是可以做一个 绿色透明的 PNG 。我想，可以通过下面这句代码，更改最后三个表示 RGB 的数字来做到。
 ```foxpro
@@ -76,7 +76,7 @@ loGfx.Clear(.Color.FromARGB(0,0,0,0))
 
 最后设置  **image.BorderStyle = 1-Fixed Single**。这样，我们就可以得到一个带有边框的“表单”。这正是我们所需要的。
 
-**感谢 Cesar 。你是真正的  GDI+ 专家。**
+***感谢 Cesar 。你是真正的  GDI+ 专家。***
 
 发表于2006年9月11日，星期一，12:55 AM 
 作者： bbout  
