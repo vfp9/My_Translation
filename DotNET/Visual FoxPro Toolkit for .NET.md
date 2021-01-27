@@ -94,10 +94,13 @@ dim lcContents as String
    ----------
    1. 在你的类模块中增加下面的 using 语句
       (揅lass1.cs,?例如):
-  using VFPToolkit;
+```foxpro
+using VFPToolkit;
+```
       后者，你可以为每一个 Toolkit 类指定一个别名（参看后面的“关于 VFPToolkitNET.dll”）。
   
       例如:
+
 ```foxpro
   using VfpDialogs = VFPToolkit.dialogs;
   using VfpArrays = VFPToolkit.arrays;
@@ -112,22 +115,29 @@ dim lcContents as String
   using VfpData = VFPToolkit.vfpData;
 ```
 2. 在 C# 中使用的命令是不同于 VB .NET 或 Visual FoxPro 的。
+
       使用命名空间、类名和函数名。
+      
       例如:
+      
       ```foxpro
   string lcContents;
   lcContents = VFPToolkit.dialogs.GetFile();
       ```
-      或者, 引用类名和函数名。如果没有冲突的命名空间的话。
+ 
+ 或者, 引用类名和函数名。如果没有冲突的命名空间的话。
       例如:
-      ```foxpro
+
+```foxpro
   string lcContents;
   lcContents = dialogs.GetFile();
      
      ```
-     混合使用，如果你使用 using 语句指定了一个别名，你可以用下面的缩写方式。
+
+混合使用，如果你使用 using 语句指定了一个别名，你可以用下面的缩写方式。
       例如:
-      ```foxpro
+ 
+ ```foxpro
   using VfpDialogs = VFPToolkit.dialogs;
          string lcContents;
   lcContents = VfpDialogs.GetFile();
