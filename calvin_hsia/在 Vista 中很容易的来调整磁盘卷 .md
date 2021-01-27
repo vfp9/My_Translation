@@ -1,4 +1,4 @@
-# 标题：It's easy to resize your disk volumes on Vista
+# It's easy to resize your disk volumes on Vista
 
 来自：http://blogs.msdn.com/calvin_hsia/archive/2007/08/10/it-s-easy-to-resize-your-disk-volumes-on-vista.aspx
 
