@@ -57,7 +57,8 @@ Toolkit 是一个对应于 FoxPro 函数的类库。如何在不同的 .NET 语�
    2. 在左侧列表中选择“公共属性”(Select Common Properties) / （导入）。
    
    3. 在命名空间文本框中，键入下列行。在每键入一行后，单击 Add Import 按纽：
-   ```foxpro
+ 
+ ```foxpro
   VFPToolkit.arrays
   VFPToolkit.dates
   VFPToolkit.dialogs
@@ -69,9 +70,11 @@ Toolkit 是一个对应于 FoxPro 函数的类库。如何在不同的 .NET 语�
   VFPToolkit.strings
   VFPToolkit.vfpData
   ```
-   4. 单击“确定”按纽保存更改。
+ 
+ 4. 单击“确定”按纽保存更改。
   
    另一种可选方法是，你可以粘贴下面的代码到你的类模块的头部(揗odule1.vb,?例如):
+ 
  ```foxpro
   Imports VFPToolkit.arrays
   Imports VFPToolkit.dates
@@ -85,7 +88,8 @@ Toolkit 是一个对应于 FoxPro 函数的类库。如何在不同的 .NET 语�
   Imports VFPToolkit.vfpData
 ```
 5. 和在 Visual FoxPro 中同样的方式来使用命令。
-      例如:
+   例如:
+
 ```foxpro
 dim lcContents as String
   lcContents = GetFile()
@@ -94,12 +98,14 @@ dim lcContents as String
    ----------
    1. 在你的类模块中增加下面的 using 语句
       (揅lass1.cs,?例如):
+
 ```foxpro
 using VFPToolkit;
 ```
-      后者，你可以为每一个 Toolkit 类指定一个别名（参看后面的“关于 VFPToolkitNET.dll”）。
+ 
+ 后者，你可以为每一个 Toolkit 类指定一个别名（参看后面的“关于 VFPToolkitNET.dll”）。
   
-      例如:
+  例如:
 
 ```foxpro
   using VfpDialogs = VFPToolkit.dialogs;
@@ -116,48 +122,63 @@ using VFPToolkit;
 ```
 2. 在 C# 中使用的命令是不同于 VB .NET 或 Visual FoxPro 的。
 
-      使用命名空间、类名和函数名。
+   使用命名空间、类名和函数名。
       
-      例如:
+   例如:
       
-      ```foxpro
+```foxpro
   string lcContents;
   lcContents = VFPToolkit.dialogs.GetFile();
-      ```
+```
  
  或者, 引用类名和函数名。如果没有冲突的命名空间的话。
-      例如:
+ 
+ 例如:
 
 ```foxpro
   string lcContents;
-  lcContents = dialogs.GetFile();
-     
-     ```
+  lcContents = dialogs.GetFile();   
+```
 
 混合使用，如果你使用 using 语句指定了一个别名，你可以用下面的缩写方式。
-      例如:
+ 
+ 例如:
  
  ```foxpro
   using VfpDialogs = VFPToolkit.dialogs;
          string lcContents;
   lcContents = VfpDialogs.GetFile();
 ```
+
 关于 VFPToolkitNET.dll
 ---------------------------
 VFPToolkitNET.dll 是一个封装了 FoxPro 函数的类库。它们包括：
+
 . arrays（数组）
+
 . dates（数据）
+
 . dialogs（对话框）
+
 . common（公共组件）
+
 . environment（环境）
+
 . files（文件）
+
 . help（帮助）
+
 . math（数学）
+
 . strings（字符串）
+
 . vfpData（VFP数据）
+
 每个类中，都包含有对应于 FoxPro 函数的方法。
  
  
 下载地址：http://foxcentral.net/microsoft/VFPToolkitNET.zip
+
 类库的VB.NET版源代码：http://foxcentral.net/microsoft/VFPToolkitNET_VBNET_Source.zip
+
 类库的C#版源代码：http://foxcentral.net/microsoft/VFPToolkitNET_CSharpNET_Source.zip
