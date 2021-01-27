@@ -118,23 +118,23 @@ nLevel - 使用1-9中哪种压缩级别 (1 是最快的压缩速度，9 是最�
 
 #### 函数 ZipFileQuick()
 
-声明： ZipFileQuick(cFileName, cPassword)
+##### 声明： ZipFileQuick(cFileName, cPassword)
 
-参数：
+##### 参数：
 
 cFileName - 你想要压缩的带完整路径的文件名。
 
 cPassword - 你所想使用的用于保护压缩文件的密码。
 
-返回值：
+##### 返回值：
 
 逻辑型 - 如果压缩成功返回 .T. ，压缩失败返回 .F. 。
 
-注释：
+##### 注释：
 
 所创建的压缩文件，具有和传入的文件同样的名字，其扩展名为“.zip”。
 
-函数 ZipFolderQuick()
+#### 函数 ZipFolderQuick()
 
 声明： ZipFileQuick(cFolderName[, lIgnorePaths[, cPassword)
 
