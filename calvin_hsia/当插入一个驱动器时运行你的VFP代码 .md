@@ -1,22 +1,24 @@
 2004年11月16日，星期二，中午12点
+
 作者：Calvin_Hsia
+
 翻译：xinjie
 
-      在上个月的拉斯维加斯的 Devcon 上，我用数码相机照了一些照片，让后将相机连接到我的 Tablet PC 上，运行了下面的这些 Visual FoxPro 代码。
+在上个月的拉斯维加斯的 Devcon 上，我用数码相机照了一些照片，让后将相机连接到我的 Tablet PC 上，运行了下面的这些 Visual FoxPro 代码。
 
-      这些存储介质上的照片通过事件处理程序，自动存入一个表中，并在一个 Grid 中显示出来。
+这些存储介质上的照片通过事件处理程序，自动存入一个表中，并在一个 Grid 中显示出来。
 
-      这些，是利用 BINDEVENTS 函数新的特性而得以实现(这些存在于 VFP9 正式版本，所以，下面的代码只能运行于VFP9及以后的版本)。
+这些，是利用 BINDEVENTS 函数新的特性而得以实现(这些存在于 VFP9 正式版本，所以，下面的代码只能运行于VFP9及以后的版本)。
  
-      下面的代码使用了 SHChangeNotifyRegister 这个 WinAPI 函数来注册了一个利用 Windows Shell 的事件处理。(该API函数的解释见：http://msdn2.microsoft.com/en-us/library/ms647677.aspx，感谢珍宝！大意如下：可以把你的窗口添加到系统的系统消息监视链中，这样窗口就能接收到来自文件系统或者Shell的通知了)
+下面的代码使用了 SHChangeNotifyRegister 这个 WinAPI 函数来注册了一个利用 Windows Shell 的事件处理。(该API函数的解释见：http://msdn2.microsoft.com/en-us/library/ms647677.aspx，感谢珍宝！大意如下：可以把你的窗口添加到系统的系统消息监视链中，这样窗口就能接收到来自文件系统或者Shell的通知了)
  
-      只需定义一个全局变量，并将 oDriveDetect 这个对象赋予这个变量，这个处理程序将一直存在，并在 drive 改变时做出已定义好的反应。
+只需定义一个全局变量，并将 oDriveDetect 这个对象赋予这个变量，这个处理程序将一直存在，并在 drive 改变时做出已定义好的反应。
  
-      正如你在下面代码所看到的那样，像文件/目录重命名这样的 shell 事件，它仍旧可以有所反应。
+正如你在下面代码所看到的那样，像文件/目录重命名这样的 shell 事件，它仍旧可以有所反应。
  
-      在 Task Pane(任务面板) 中有更多的示例：打开任务面板，选择 Solution Samples(解决方案示例) 中的 New in Visual Foxpro 9(VFP9 的新增功能),里面有一个示例 “Binding to Windows Message Events”(绑定 Windoes 消息事件)
+在 Task Pane(任务面板) 中有更多的示例：打开任务面板，选择 Solution Samples(解决方案示例) 中的 New in Visual Foxpro 9(VFP9 的新增功能),里面有一个示例 “Binding to Windows Message Events”(绑定 Windoes 消息事件)
  
-      (关于拉斯维加斯的屏幕保护程序Demo，可以参看博客 http://blogs.msdn.com/calvin_hsia/archive/2004/10/04/237723.aspx)
+(关于拉斯维加斯的屏幕保护程序Demo，可以参看博客 http://blogs.msdn.com/calvin_hsia/archive/2004/10/04/237723.aspx)
 
 ```foxpro 
 #define GWL_WNDPROC         (-4)
