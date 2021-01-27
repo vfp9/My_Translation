@@ -13,6 +13,8 @@
 Titlebar.png
 <img src="../../Picture/Titlebar.png">
 
+![Titlebar.png](https://github.com/vfp9/My_Translation/blob/main/Picture/Titlebar.png)
+
 图片点击可在新窗口打开查看
 
 Mainform.png
