@@ -13,7 +13,9 @@
 
 ### VFP Compression 更新：
 
-下载 VFPCompression FLL  (大约 35 KB )
+下载 VFPCompression FLL  (大约 35 KB )(http://www.sweetpotatosoftware.com/files/vfpcompression.zip)
+
+_(译者注：此下载文件为原作者最终提供的版本)_
 
 ### VFP Compression 示例代码：
 ```foxpro
