@@ -534,34 +534,35 @@ nIndex - 你想返回的相关文件信息的索引号。
 
 所创建的数组的名字由参数 cArrayName 决定。如果同名数组存在则释放数组并重新创建。UnzipAFileInfoByIndex() 函数用于 UnzipOpen() 函数和 UnzipClose() 之间，用来显示一个特定文件的信息。该文件可以通过存储在当前压缩文件的位置找到。你可以认为压缩文件中的内容是一个表中的记录。从这个角度来讲，你可以使用 UnzipAFileInfoByIndex（）函数来查找文件，并且找到压缩文件中某个记录的信息。
 ****
-函数 UnzipAFileInfo()
+#### 函数 UnzipAFileInfo()
 
-声明： UnzipAFileInfo(cArrayName)
+##### 声明： UnzipAFileInfo(cArrayName)
 
-参数：
+##### 参数：
 
 cArrayName - 要创建的包含文件信息的VFP数组名。
 
-返回值： 
+##### 返回值： 
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
 所创建的数组有13行（元素）。每一行都包含文件不同方面的信息。下表描述了每一行所包含的内容和数据类型：
 
-行	数组内容 	数据类型 
-1	File Name  （文件名）	Character
-2	Comment （注释）	Character
-3	Version （版本号）	Numeric
-4	Version Needed （版本号）	Numeric
-5	Flags （标志）	Numeric
-6	Compression Method （压缩方法）	Numeric
-7	DOS Date （日期）	Datetime
-8	CRC （循环冗余校验）	Numeric
-9	Compressed Size （压缩后的文件大小）	Numeric
-10	Uncompressed Size （原始的文件大小）	Numeric
-11	Internal Attribute （内在属性）	Numeric
-12	External Attribute （外部属性）	Numeric
-13	Folder （文件夹）	Logical
-Remarks:
+|行	|数组内容 	|数据类型 |
+|----------|----------------------|----------|
+|1	|File Name （文件名）	|Character|
+|2	|Comment （注释）	|Character|
+|3	|Version （版本号）	|Numeric|
+|4	|Version Needed （版本号）	|Numeric|
+|5	|Flags （标志）	|Numeric|
+|6	|Compression Method （压缩方法）	|Numeric|
+|7	|DOS Date （日期）	|Datetime|
+|8	|CRC （循环冗余校验）	|Numeric|
+|9	|Compressed Size （压缩后的文件大小）	|Numeric|
+|10	|Uncompressed Size （原始的文件大小）	|Numeric|
+|11	|Internal Attribute （内在属性）	|Numeric|
+|12	|External Attribute （外部属性）	|Numeric|
+|13	|Folder （文件夹）	|Logical|
+##### Remarks:
 
 所创建的数组的名字由参数 cArrayName 决定。如果同名数组存在则释放数组并重新创建。UnzipAFileInfo() 函数用于 UnzipOpen() 函数和 UnzipClose() 之间，用来显示一个特定文件的信息。使 UnzipAFileInfo（）函数与 UnzipGotoTopFile（）、UnzipGotoNextFile（）、UnzipGotoFileByName（）和 UnzipGotoFileByIndex（）协同工作可以返回存储在当前打开的压缩文件中的特定文件信息。 你可以认为压缩文件中的内容是一个表中的记录。从这个角度来讲，你可以使用  UnzipAFileInfo（）函数函数来查找文件，并且找到压缩文件中某个记录的信息。 
