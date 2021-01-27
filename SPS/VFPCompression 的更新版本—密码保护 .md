@@ -97,7 +97,7 @@ SET LIBRARY TO
 ```
 
 ### VFP Compression 文档：
-
+---
 #### 函数 ZipString()
 
 ##### 声明：ZipString(cString[, nLevel])
@@ -113,7 +113,6 @@ nLevel - 使用1-9中哪种压缩级别 (1 是最快的压缩速度，9 是最�
 字符型 - 传入字符串的压缩版本。
 
 ##### 注释：
-
 这个函数对于C/S程序得到字符串特别有用（例如备注字段、字符型字段以及XML），它可以在网络传输过程中对这些数据进行压缩，然后在另一端解压缩（使用函数 UnzipString）。
 ---
 #### 函数 ZipFileQuick()
@@ -136,9 +135,9 @@ cPassword - 你所想使用的用于保护压缩文件的密码。
 ---
 #### 函数 ZipFolderQuick()
 
-声明： ZipFileQuick(cFolderName[, lIgnorePaths[, cPassword)
+##### 声明： ZipFileQuick(cFolderName[, lIgnorePaths[, cPassword)
 
-参数：
+##### 参数：
 
 cFolderName - 你希望压缩的带完整路径的文件夹名。
 
@@ -146,14 +145,14 @@ cPassword - 你想要保护压缩文件的密码。
 
 lIgnorePath - 如果你想在压缩文件中忽略文件的相对路径，可以传递 .T. 到这个参数。默认值是 .F. ，意味着保留相对路径。
 
-返回值：
+##### 返回值：
 
 逻辑型 - 如果压缩成功返回 .T. ，否则返回 .F. 。
 
-注释：
+##### 注释：
 
 所创建的压缩文件具有和参数 cFolderName 同样的名字，扩展名为“.zip”。
-
+---
 函数 ZipOpen()
 
 声明： ZipOpen(cZipFileName[,cFolderName[,lAppend]])
