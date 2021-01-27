@@ -1,8 +1,13 @@
 来自：http://blogs.msdn.com/calvin_hsia/archive/2007/08/10/it-s-easy-to-resize-your-disk-volumes-on-vista.aspx
+
 标题：It's easy to resize your disk volumes on Vista
+
 作者：calvin_hsia
+
 时间：2007年8月10日
+
 翻译：xinjie
+
 注意：本人未安装Vista系统，所以对文章中所介绍的方法不做任何明示或暗示的保证。如有兴趣，可以尝试。
 
      我有一台机器安装有 Vista 系统，它具有一个 140G 的硬盘。其中 C 区 20G，D 区 80G，E 区 40G。E 区空间快用完了，所以，我想使这个分区可以变大一些。
