@@ -1,12 +1,19 @@
 压缩文件: VFPToolkitNET.ZIP
+
 程序: Visual FoxPro Toolkit for .NET
+
 作者: Kamal Patel (kppatel@yahoo.com)
+
 版权: 无(公用)
+
 日期: 2002年4月24日
+
 Version 1.00
+
 Readme.txt 文件翻译：xinjie
  
 所有源代码和包含在 Visual FoxPro Toolkit for .NET (VFPToolkitNET.ZIP) 中的文件都是公共文件。你可以使用、编辑、拷贝和分发，并且，源代码、示例程序或包含在 VFPToolkitNET.ZIP 中的文件是自由软件，并无版权保护。所有包含在 VFPToolkitNET.ZIP 中的文件都不提供责任担保。作者、捐献者或发行者不会承担任何责任。
+
 关于 VFP Toolkit for .NET 的问题和讨论，都在 UT (http://www.universalthread.com) 的 .NET 范围，它被称为 Visual FoxPro Toolkit for .NET 。请在 UT 上发表问题、建议或需要改进的等等内容。
  
 Visual FoxPro Toolkit for .NET 开发小组:
@@ -51,7 +58,7 @@ Toolkit 是一个对应于 FoxPro 函数的类库。如何在不同的 .NET 语�
    4. 单击“确定”按纽保存更改。
   
    另一种可选方法是，你可以粘贴下面的代码到你的类模块的头部(揗odule1.vb,?例如):
- 
+ ```foxpro
   Imports VFPToolkit.arrays
   Imports VFPToolkit.dates
   Imports VFPToolkit.dialogs
@@ -62,11 +69,13 @@ Toolkit 是一个对应于 FoxPro 函数的类库。如何在不同的 .NET 语�
   Imports VFPToolkit.math
   Imports VFPToolkit.strings
   Imports VFPToolkit.vfpData
-   5. 和在 Visual FoxPro 中同样的方式来使用命令。
+```
+5. 和在 Visual FoxPro 中同样的方式来使用命令。
       例如:
-  dim lcContents as String
+```vb
+dim lcContents as String
   lcContents = GetFile()
-
+```
    在 C# .NET 中
    ----------
    1. 在你的类模块中增加下面的 using 语句
@@ -75,6 +84,7 @@ Toolkit 是一个对应于 FoxPro 函数的类库。如何在不同的 .NET 语�
       后者，你可以为每一个 Toolkit 类指定一个别名（参看后面的“关于 VFPToolkitNET.dll”）。
   
       例如:
+```foxpro
   using VfpDialogs = VFPToolkit.dialogs;
   using VfpArrays = VFPToolkit.arrays;
   using VfpDates = VFPToolkit.dates;
@@ -86,22 +96,28 @@ Toolkit 是一个对应于 FoxPro 函数的类库。如何在不同的 .NET 语�
   using VfpMath = VFPToolkit.math;
   using VfpStrings = VFPToolkit.strings;
   using VfpData = VFPToolkit.vfpData;
-   2. 在 C# 中使用的命令是不同于 VB .NET 或 Visual FoxPro 的。
+```
+2. 在 C# 中使用的命令是不同于 VB .NET 或 Visual FoxPro 的。
       使用命名空间、类名和函数名。
       例如:
+      ```foxpro
   string lcContents;
   lcContents = VFPToolkit.dialogs.GetFile();
+      ```
       或者, 引用类名和函数名。如果没有冲突的命名空间的话。
       例如:
+      ```foxpro
   string lcContents;
   lcContents = dialogs.GetFile();
-      混合使用，如果你使用 using 语句指定了一个别名，你可以用下面的缩写方式。
+     
+     ```
+     混合使用，如果你使用 using 语句指定了一个别名，你可以用下面的缩写方式。
       例如:
+      ```foxpro
   using VfpDialogs = VFPToolkit.dialogs;
-  ...
          string lcContents;
   lcContents = VfpDialogs.GetFile();
-
+```
 关于 VFPToolkitNET.dll
 ---------------------------
 VFPToolkitNET.dll 是一个封装了 FoxPro 函数的类库。它们包括：
