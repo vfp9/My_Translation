@@ -132,7 +132,7 @@ cPassword - 你所想使用的用于保护压缩文件的密码。
 ##### 注释：
 
 所创建的压缩文件，具有和传入的文件同样的名字，其扩展名为“.zip”。
----
+****
 #### 函数 ZipFolderQuick()
 
 ##### 声明： ZipFileQuick(cFolderName[, lIgnorePaths[, cPassword)
@@ -152,7 +152,7 @@ lIgnorePath - 如果你想在压缩文件中忽略文件的相对路径，可以
 ##### 注释：
 
 所创建的压缩文件具有和参数 cFolderName 同样的名字，扩展名为“.zip”。
----
+****
 #### 函数 ZipOpen()
 
 ##### 声明： ZipOpen(cZipFileName[,cFolderName[,lAppend]])
@@ -172,7 +172,7 @@ lAppend - 如果压缩文件已经存在，你可以使用 .T. 来在其中追�
 ##### 注释：
 
 ZipOpen() 需要与 ZipClose() 函数协同使用。通常情况下，使用 ZipOpen() 来创建/打开压缩文件，使用 ZipFile()、ZipFileRelative()和ZipFolder() 函数来压缩文件 和/或 文件夹，然后使用 ZipClose() 函数关闭压缩文件。
----
+****
 #### 函数 ZipClose()
 
 ##### 声明：ZipClose()
@@ -186,7 +186,7 @@ ZipOpen() 需要与 ZipClose() 函数协同使用。通常情况下，使用 Zip
 ##### 注释：
 
 在使用 ZipOpen() 后必须调用ZipClose() 函数。通常情况下，使用 ZipOpen() 来创建/打开压缩文件，使用 ZipFile()、ZipFileRelative()和ZipFolder() 函数来压缩文件 和/或 文件夹，然后使用 ZipClose() 函数关闭压缩文件。
----
+****
 #### 函数 ZipFile()
 
 ##### 声明： ZipFile(cFileName[,lIgnorePath[,cPassword]])
@@ -208,12 +208,12 @@ cPassword - 你想用于保护压缩文件的密码。
 ZipFile() 函数用于ZipOpen() 函数和 ZipClose() 函数之间。通常情况下，使用 ZipOpen() 来创建/打开压缩文件，使用 ZipFile()、ZipFileRelative()和ZipFolder() 函数来压缩文件 和/或 文件夹，然后使用 ZipClose() 函数关闭压缩文件。
 
 参数 cPassword 通常是针对整个压缩文件的，然而这并不是必须的。不同的密码可以针对压缩文件中不同的文件，你甚至可以选择用密码保护压缩文件中指定的文件。
----
-函数 ZipFileRelative()
+****
+#### 函数 ZipFileRelative()
 
-声明： ZipFileRelative(cFileName[,cRelativePath[, cPassword]])
+##### 声明： ZipFileRelative(cFileName[,cRelativePath[, cPassword]])
 
-参数：
+##### 参数：
 
 cFileName - 你想压缩的文件名或带完整路径的文件名。
 
@@ -221,21 +221,21 @@ cRelativePath - 你想在压缩文件中保存该文件的相对路径。这允�
 
 cPassword - 你想用于保护压缩文件的密码。
 
-返回值：
+##### 返回值：
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-注释： 
+##### 注释： 
 
 ZipFileRelative() 函数用于ZipOpen() 函数和 ZipClose() 函数之间。通常情况下，使用 ZipOpen() 来创建/打开压缩文件，使用 ZipFile()、ZipFileRelative()和ZipFolder() 函数来压缩文件 和/或 文件夹，然后使用 ZipClose() 函数关闭压缩文件。
 
 参数 cPassword 通常是针对整个压缩文件的，然而这并不是必须的。不同的密码可以针对压缩文件中不同的文件，你甚至可以选择用密码保护压缩文件中指定的文件。
+*****
+#### 函数 ZipFolder()
 
-函数 ZipFolder()
+##### 声明： ZipFolder(cFolderName[,lIgnorePaths[, cPassword])
 
-声明： ZipFolder(cFolderName[,lIgnorePaths[, cPassword])
-
-参数： 
+##### 参数： 
 
 cFolderName - 你想要压缩的文件夹的完整路径。
 
@@ -243,14 +243,14 @@ lIgnorePaths - 如果你想在压缩文件中忽略文件夹的相对路径，�
 
 cPassword - 你想用于保护压缩文件的密码。
 
-返回值：
+##### 返回值：
 
 逻辑型 - 执行成功返回 .T. ，否则返回 .F. 。
 
-注释：
+##### 注释：
 
 ZipFolder() 函数用于ZipOpen() 函数和 ZipClose() 函数之间。通常情况下，使用 ZipOpen() 来创建/打开压缩文件，使用 ZipFile()、ZipFileRelative()和ZipFolder() 函数来压缩文件 和/或 文件夹，然后使用 ZipClose() 函数关闭压缩文件。
-
+****
 函数 UnzipString()
 
 声明： UnzipString(cString)
