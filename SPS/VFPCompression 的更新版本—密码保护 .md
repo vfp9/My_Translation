@@ -17,6 +17,8 @@
 
 **_(译者注：此下载文件为原作者最终提供的版本)_**
 
+**[最后一个版本的示例代码和使用文档](http://www.sweetpotatosoftware.com/blog/index.php/2008/12/01/vfpcompression-update-fix-and-zipfile-comment-support/)**
+
 ### VFP Compression 示例代码：
 ```foxpro
 *!* Example 1
