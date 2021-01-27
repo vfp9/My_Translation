@@ -17,11 +17,17 @@ Readme.txt 文件翻译：xinjie
 关于 VFP Toolkit for .NET 的问题和讨论，都在 UT (http://www.universalthread.com) 的 .NET 范围，它被称为 Visual FoxPro Toolkit for .NET 。请在 UT 上发表问题、建议或需要改进的等等内容。
  
 Visual FoxPro Toolkit for .NET 开发小组:
+
     - Kamal Patel (Lead Developer, Creator)
+    
     - Cathi Gero (Program Manager)
+    
     - Rick Hodder (Help)
+    
     - Nancy Folsom (Reviewer, Evangelist)
+    
     - Ken Levy (Advisor, Communications)
+    
 安装和使用 VFP Toolkit for .NET
 ---------------------------------------------
 Visual FoxPro Toolkit for .NET ("Toolkit") 是一个类库，它可以在 Visual Basic .NET 或 C# .NET 中执行 Visual FoxPro 中的函数。为了在 Visual Studio .NET 项目中使用它，你必须首先要安装 Toolkit 并将其增加你的 .NET 项目引用中。
@@ -29,21 +35,29 @@ Visual FoxPro Toolkit for .NET ("Toolkit") 是一个类库，它可以在 Visual
 安装 VFP Toolkit for .NET
 -----------------------------------
 1. 解压包含在压缩文件中的文件到 C:\VFPToolkitNET 目录。
+
 2. 在资源管理器中，双击执行 Setup.BAT 文件。
 
 在你的 Visual Studio .NET 项目中增加一个到 VFPToolkitNET 集合的引用
 --------------------------------------------------------------------------------
 1. 在 Visual Studio .NET 中创建一个新项目。
+
 2. 在解决方案资源管理器中，右击“引用”并选择“增加引用”。
+
 3. 在 .Net 标签下，在列表中选择“Visual FoxPro Toolkit for .NET”并双击它。然后单击“选择”按钮。如果你在列表中没有看到这个文件，那么九单击“浏览”按纽，并定位到 VFPToolkitNET.dll 文件所在目录 C:\VFPToolkitNET 。
+
 4. 单击“确定”按纽。这将会使 Toolkit 的引用增加到你的项目中。
+
 Toolkit 是一个对应于 FoxPro 函数的类库。如何在不同的 .NET 语言中使用它呢？
   
    在 Visual Basic .NET 中
    -------------------- 
    1. 在解决方案资源管理器中，右击项目并选择“属性”。
+   
    2. 在左侧列表中选择“公共属性”(Select Common Properties) / （导入）。
+   
    3. 在命名空间文本框中，键入下列行。在每键入一行后，单击 Add Import 按纽：
+   ```foxpro
   VFPToolkit.arrays
   VFPToolkit.dates
   VFPToolkit.dialogs
@@ -54,7 +68,7 @@ Toolkit 是一个对应于 FoxPro 函数的类库。如何在不同的 .NET 语�
    VFPToolkit.math
   VFPToolkit.strings
   VFPToolkit.vfpData
-  
+  ```
    4. 单击“确定”按纽保存更改。
   
    另一种可选方法是，你可以粘贴下面的代码到你的类模块的头部(揗odule1.vb,?例如):
@@ -72,7 +86,7 @@ Toolkit 是一个对应于 FoxPro 函数的类库。如何在不同的 .NET 语�
 ```
 5. 和在 Visual FoxPro 中同样的方式来使用命令。
       例如:
-```vb
+```foxpro
 dim lcContents as String
   lcContents = GetFile()
 ```
