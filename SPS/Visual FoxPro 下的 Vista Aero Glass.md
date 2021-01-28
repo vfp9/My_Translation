@@ -6,10 +6,14 @@
 
 当透明表单刚刚出现时，就已经有了一些关于它的一些技术，它是来自 Windows Vista 的具有强烈震撼的 Aero Glass 效果。我的看法是，Aero Glass 效果是一个决定性的要素，它标志着一个应用程序可以运行于 Windows Vista 。所以，一些开发者针对他们的应用程序找到一些方式使它看上去非常像 Aero Glass 效果，这并不是特别能认人感到惊喜。Bernard Bout 在他的博客中提供了一些非常好的示例。它需要开发时有好的视力，可以从 [Cesar Chalom](http://weblogs.foxite.com/cesarchalom/) 和 GDI+ 可以得到一些帮助，它是 Windows Vista 的 Aero Glass 入门指南，Bernard 已经给我留下了印象（随后我也说出了我的看法）。请参看下面的他的博客连接来查看我讨论过什么。
 
-[在 Visual Foxpro 的图象中应用 Alpha 滤镜](https://github.com/vfp9/My_Translation/blob/main/bernardbout/%E5%9C%A8%20Visual%20Foxpro%20%E7%9A%84%E5%9B%BE%E8%B1%A1%E4%B8%AD%E5%BA%94%E7%94%A8%20Alpha%20%E6%BB%A4%E9%95%9C.md)
-[在 Visual FoxPro 中显示透明表单](https://github.com/vfp9/My_Translation/blob/main/bernardbout/%E5%9C%A8%20Visual%20FoxPro%20%E4%B8%AD%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%A1%A8%E5%8D%95.md)
-非常非常酷的 VFP
-使用 Visual Foxpro 来做 Glass!
+- [在 Visual Foxpro 的图象中应用 Alpha 滤镜](https://github.com/vfp9/My_Translation/blob/main/bernardbout/%E5%9C%A8%20Visual%20Foxpro%20%E7%9A%84%E5%9B%BE%E8%B1%A1%E4%B8%AD%E5%BA%94%E7%94%A8%20Alpha%20%E6%BB%A4%E9%95%9C.md)
+
+- [在 Visual FoxPro 中显示透明表单](https://github.com/vfp9/My_Translation/blob/main/bernardbout/%E5%9C%A8%20Visual%20FoxPro%20%E4%B8%AD%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%A1%A8%E5%8D%95.md)
+
+- 非常非常酷的 VFP
+
+- 使用 Visual Foxpro 来做 Glass!
+
 Visual FoxPro 怎样运行于 Vista
 
     创建一个具有 Aero Glass 效果的 Visual FoxPro 应用程序非常容易。顶层表单（ShowWindow = 2）可以自动适应（标题栏、控件和边框）Aero Glass 。这是一件好事，Visual FoxPro 不需要改变就可以在微软提供的操作系统中得到最新最好的视觉效果（还记得在 VFP 中增加的主题支持吗？）。替代方案并不是真实的，这种方案才是真实的（参看下面的截图，一个 ShowWindow = 0 或 1 的 VFP 表单）。
