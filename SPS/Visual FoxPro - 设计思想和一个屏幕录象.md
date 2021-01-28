@@ -12,6 +12,8 @@
 
 有线索吗？
 
+<img src="http://www.sweetpotatosoftware.com/images/xfcDesignerAnimate.gif">
+
 ### -我是这样想的
 
 生动的录象展示了一个简单的 Visual FoxPro 控件，它是一个容器，其中有3个按纽，一同组成一个滚动条。创建一个这样的子类显然很容易，然而，你可能注意到容器所包含的控件的尺寸、位置、甚至 picture 属性在设计时刻都可以动态的改变（是的，这是设计时刻，不要和运行时刻混淆），自动适应容器控件本身的改变。
@@ -23,6 +25,6 @@
 如果你对如何使之成为可能感兴趣，并且知道对于 Visual FoxPro 意味着什么，那么我怂恿你观看这段录象并且下载源代码。
 
 
-录象下载地址（大约 8.4M）：http://www.sweetpotatosoftware.com/SPSBlog/ct.ashx?id=cbe94fe8-cf6b-4600-9a05-b23b0adff749&url=http%3a%2f%2fwww.sweetpotatosoftware.com%2ffiles%2fxfcDesignerScreencast.zip
+录象下载地址（大约 8.4M）：http://www.sweetpotatosoftware.com/files/xfcDesignerScreencast.zip
 
-源代码下载地址（大约 8k）：http://www.sweetpotatosoftware.com/SPSBlog/ct.ashx?id=cbe94fe8-cf6b-4600-9a05-b23b0adff749&url=http%3a%2f%2fwww.sweetpotatosoftware.com%2ffiles%2fxfcDesignerSource.zip
+源代码下载地址（大约 8k）：http://www.sweetpotatosoftware.com/files/xfcDesignerSource.zip
