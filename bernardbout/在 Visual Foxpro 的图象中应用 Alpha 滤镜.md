@@ -11,12 +11,15 @@
 我在 Paint Shop Pro 中创建了一些图象，当然，你可以使用其他的图象工具，像 Photoshop 等等这些软件。当我在 VFP 的 image 控件中载入这些图象时，获得了非常有趣的效果，所以我决定花一些时间来探索这个特性并想出下面的一些屏幕效果。Titlebar.png 用于标题栏， mainform.png 用于主表单区域。我增加了  Vistabuttons.bmp 并在它上面放置了不可见的命令按钮用来进行操作。所有这些都放置在 VFP 中包含 image 的透明容器中，并且对于其他的对象，像 labels、textboxes 等等都置于顶层。可以通过使用 ADDOBJECT() 将容器添加到表单中。下面的图片可以通过右键-图片另存为...  保存到你的硬盘上。
 
 Titlebar.png
+
 <img src="../../Picture/Titlebar.png">
 
 Mainform.png
+
 <img src="../../Picture/Mainform.png">
 
 VistaButtons.bmp
+
 <img src="../../Picture/VistaButtons.png">
 
 这里的“表单”类实际是一个包含所有对象的透明容器。它可以像任何其他类一样实例化为一个“表单”。
