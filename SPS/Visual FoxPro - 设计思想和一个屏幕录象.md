@@ -25,6 +25,6 @@
 如果你对如何使之成为可能感兴趣，并且知道对于 Visual FoxPro 意味着什么，那么我怂恿你观看这段录象并且下载源代码。
 
 
-录象下载地址（大约 8.4M）：http://www.sweetpotatosoftware.com/files/xfcDesignerScreencast.zip
+[录象下载地址（大约 8.4M）](http://www.sweetpotatosoftware.com/files/xfcDesignerScreencast.zip)
 
-源代码下载地址（大约 8k）：http://www.sweetpotatosoftware.com/files/xfcDesignerSource.zip
+[源代码下载地址（大约 8k）](http://www.sweetpotatosoftware.com/files/xfcDesignerSource.zip)
