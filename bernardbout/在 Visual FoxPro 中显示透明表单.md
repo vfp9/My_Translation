@@ -1,4 +1,5 @@
 #Transparent Forms in Visual FoxPro Revealed
+
 来自：http://weblogs.foxite.com/bernardbout/archive/2006/08/27/2353.aspx
 
 翻译：xinjie
