@@ -14,38 +14,38 @@
 
 - 使用 Visual Foxpro 来做 Glass!
 
-Visual FoxPro 怎样运行于 Vista
+## Visual FoxPro 怎样运行于 Vista
 
-    创建一个具有 Aero Glass 效果的 Visual FoxPro 应用程序非常容易。顶层表单（ShowWindow = 2）可以自动适应（标题栏、控件和边框）Aero Glass 。这是一件好事，Visual FoxPro 不需要改变就可以在微软提供的操作系统中得到最新最好的视觉效果（还记得在 VFP 中增加的主题支持吗？）。替代方案并不是真实的，这种方案才是真实的（参看下面的截图，一个 ShowWindow = 0 或 1 的 VFP 表单）。
+创建一个具有 Aero Glass 效果的 Visual FoxPro 应用程序非常容易。顶层表单（ShowWindow = 2）可以自动适应（标题栏、控件和边框）Aero Glass 。这是一件好事，Visual FoxPro 不需要改变就可以在微软提供的操作系统中得到最新最好的视觉效果（还记得在 VFP 中增加的主题支持吗？）。替代方案并不是真实的，这种方案才是真实的（参看下面的截图，一个 ShowWindow = 0 或 1 的 VFP 表单）。
 
-Visual FoxPro 下的 Vista Aero Glass - openvfp - openvfp的博客
+<img src="../../Picture/form9.png">
 
-在开始之前需要了解的
+## 在开始之前需要了解的
 
-    我知道你在读这些内容时在想什么：“Craig, 你在这里讲的 Windows Vista 中实现 Aero Glass 效果和其他已经展示的方法相比，没什么新的东西！”。 然而，你大概还没有看到过在客户区域（表面的区域）显示出 Aero Glass 效果的 VFP 表单（我不相信你曾经看到过），这就是我要讨论的东西。下面的截图是一个例子，也就是我要讨论的东西。
+我知道你在读这些内容时在想什么：“Craig, 你在这里讲的 Windows Vista 中实现 Aero Glass 效果和其他已经展示的方法相比，没什么新的东西！”。 然而，你大概还没有看到过在客户区域（表面的区域）显示出 Aero Glass 效果的 VFP 表单（我不相信你曾经看到过），这就是我要讨论的东西。下面的截图是一个例子，也就是我要讨论的东西。
 
-Visual FoxPro 下的 Vista Aero Glass - openvfp - openvfp的博客
+<img src="../../Picture/form10.png">
 
-它是如何做到的？
+## 它是如何做到的？
 
-    为了实现它，我使用了来自 Windows Vista 中 Desktop Window Manager API (dwmapi.dll) 的函数  DwmExtendFrameIntoClientArea 。在 MSDN 中该函数是这样声明的：
-
+为了实现它，我使用了来自 Windows Vista 中 [Desktop Window Manager API](http://blogs.msdn.com/greg_schechter/archive/2006/09/14/753605.aspx) (dwmapi.dll) 的函数  DwmExtendFrameIntoClientArea 。在 MSDN 中该函数是这样声明的：
+```foxpro
 HRESULT DwmExtendFrameIntoClientArea(
 HWND hWnd,
 const MARGINS *pMarInset
 );
-
+```
 并且，MARGINS 结构(参看上面代码的 pMarInset 参数)是这样定义的：
-
+```foxpro
 typedef struct _MARGINS{
 int cxLeftWidth;
 int cxRightWidth;
 int cyTopHeight;
 int cyBottomHeight;
 } MARGINS, *PMARGINS
-
-    我将它转换成下面的声明格式，并且将代码增加到运行于 Windows Vista 的 Visual FoxPro 9.0 的顶层表单的 Init() 事件中：
-
+```
+我将它转换成下面的声明格式，并且将代码增加到运行于 Windows Vista 的 Visual FoxPro 9.0 的顶层表单的 Init() 事件中：
+```foxpro
 DECLARE LONG DwmExtendFrameIntoClientArea IN dwmapi.dll Long hwnd, string @ pMarInset
 
 LOCAL lnHwnd, lcMargin, lnGlassLeft, lnGlassRight, lnGlassTop, lnGlassBottom
@@ -61,7 +61,7 @@ m.lcMargin = BINTOC(m.lnGlassLeft, '4RS') ;
             + BINTOC(m.lnGlassBottom, '4RS')
 
 DwmExtendFrameIntoClientArea(m.lnHwnd, @m.lcMargin)
-
+```
     这段代码在我的顶层表单中并没有显示出任何效果，我知道我遇到了一个难题。答案来自 article out on Code Project 。它指出，DwmExtendFrameIntoClientArea 函数的工作需要将作为神奇的 Aero Glass 效果的像素设置它们自己的 Alpha channel ，且设置为 0 。并且，文章指出，最容易的方式就是将这些像素设置为黑色。
 
     所以，相比于绑定 windows 消息，我选择使用 GDI+ 来实现它（我确信可以），在表单中使用一些黑色的 VFP shapes 。我在表单中放置了 4 个 shape ，并且设置了它们的宽高（依赖于它们所在的位置），以匹配我已经赋值的 m.lnGlassLeft、m.lnGlassRight、m.lnGlassTop 和 m.lnGlassBottom (参看上面的代码，我伪造了一个 MARGINS 结构)。设计结束的表单，在设计器中就是下面截图这个样子。并且，当我运行它时，我得到了一个在客户区域具有 Aero Glass 效果的 VFP 表单！
