@@ -28,47 +28,43 @@
 
 我将这个图片作为我的表单类的背景。我手工调整表单的大小直到正好容纳下图象。这样，我就得到了一个可以用于所有表单的表单类。这里是其中一个子表单的设计时刻的截图。
 
-在 Visual FoxPro 中显示透明表单 - openvfp - openvfp的博客
+<img src="../../Picture/form6.png">
 
-    每个子表单都利用这个类来创建，并在其中增加代码。树中每个节点的 Click 事件都打开一个应用表单。
+每个子表单都利用这个类来创建，并在其中增加代码。树中每个节点的 Click 事件都打开一个应用表单。
 
-    在表单类的 INI 事件中我增加了这些代码：
-
+在表单类的 INI 事件中我增加了这些代码：
+```foxpro
 LPARAMETERS toForm
 
 With ThisForm
-
-* LabelX 是红色“X”标签的对象名
-
-.Top = toForm.LabelX.Top
-
-     .Left = toForm.LabelX.Left
-
+    * LabelX 是红色“X”标签的对象名
+    .Top = toForm.LabelX.Top
+    .Left = toForm.LabelX.Left
 ENDWITH
-
-    在 Treeview 项目中的 Click 像这样来调用合适的表单：
-
+```
+在 Treeview 项目中的 Click 像这样来调用合适的表单：
+```foxpro
 DO Form MyChildForm With ThisForm NOSHOW
 
 SHOW Window MyChildForm IN WINDOW Mainform
+```
+利用上面的代码，子表单可以显示在适当的位置，并且在主表单移动时也会随之移动。显而易见的，调整表单大小是不允许的。在测试阶段，我会轻微的调整红色的“X”以便图象可以准确的对应。
 
-    利用上面的代码，子表单可以显示在适当的位置，并且在主表单移动时也会随之移动。显而易见的，调整表单大小是不允许的。在测试阶段，我会轻微的调整红色的“X”以便图象可以准确的对应。
+最终的效果就是下面的截图。我故意在子表单左边留下一个比较宽的边框，以便更明显的显示出效果。
 
-    最终的效果就是下面的截图。我故意在子表单左边留下一个比较宽的边框，以便更明显的显示出效果。
+<img src="../../Picture/form7.png">
 
-在 Visual FoxPro 中显示透明表单 - openvfp - openvfp的博客
+这个是放大后的表单边缘的效果：
 
-    这个是放大后的表单边缘的效果：
+<img src="../../Picture/form8.png">
 
-在 Visual FoxPro 中显示透明表单 - openvfp - openvfp的博客
+这样就好象子表单是透明的，并且可以通过它看到主表单的背景。而控件是不透明的。这个效果在 windows XP 下不能实现。它仅仅在 Vista 下利用新的 API 才可以实现。
 
-    这样就好象子表单是透明的，并且可以通过它看到主表单的背景。而控件是不透明的。这个效果在 windows XP 下不能实现。它仅仅在 Vista 下利用新的 API 才可以实现。
+**幻象结束了。**
 
-    幻象结束了。
+伟大的 Fox！
 
-    伟大的 Fox！
-
-    这里有其他相似效果的表单截图。
+[这里有其他相似效果的表单截图。](http://www.foxite.com/archives/seethrough-form-0000105324.htm)
 
 发表于2006年8月27日，星期日，2:15 PM
 作者：bbout
