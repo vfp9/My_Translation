@@ -10,9 +10,9 @@
 
 - [在 Visual FoxPro 中显示透明表单](https://github.com/vfp9/My_Translation/blob/main/bernardbout/%E5%9C%A8%20Visual%20FoxPro%20%E4%B8%AD%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%A1%A8%E5%8D%95.md)
 
-- 非常非常酷的 VFP
+- [非常非常酷的 VFP](http://weblogs.foxite.com/bernardbout/archive/2006/08/16/2261.aspx)
 
-- 使用 Visual Foxpro 来做 Glass!
+- [使用 Visual Foxpro 来做 Glass!](http://weblogs.foxite.com/bernardbout/archive/2006/06/15/1838.aspx)
 
 ## Visual FoxPro 怎样运行于 Vista
 
