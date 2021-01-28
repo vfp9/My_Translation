@@ -62,7 +62,7 @@ m.lcMargin = BINTOC(m.lnGlassLeft, '4RS') ;
 
 DwmExtendFrameIntoClientArea(m.lnHwnd, @m.lcMargin)
 ```
-这段代码在我的顶层表单中并没有显示出任何效果，我知道我遇到了一个难题。答案来自 article out on Code Project 。它指出，DwmExtendFrameIntoClientArea 函数的工作需要将作为神奇的 Aero Glass 效果的像素设置它们自己的 Alpha channel ，且设置为 0 。并且，文章指出，最容易的方式就是将这些像素设置为黑色。
+这段代码在我的顶层表单中并没有显示出任何效果，我知道我遇到了一个难题。答案来自 [article out on Code Project](http://www.codeproject.com/winfx/VGGlassIntro.asp) 。它指出，DwmExtendFrameIntoClientArea 函数的工作需要将作为神奇的 Aero Glass 效果的像素设置它们自己的 [Alpha channel](http://www.webopedia.com/TERM/A/alpha_channel.html) ，且设置为 0 。并且，文章指出，最容易的方式就是将这些像素设置为黑色。
 
 所以，相比于绑定 windows 消息，我选择使用 GDI+ 来实现它（我确信可以），在表单中使用一些黑色的 VFP shapes 。我在表单中放置了 4 个 shape ，并且设置了它们的宽高（依赖于它们所在的位置），以匹配我已经赋值的 m.lnGlassLeft、m.lnGlassRight、m.lnGlassTop 和 m.lnGlassBottom (参看上面的代码，我伪造了一个 MARGINS 结构)。设计结束的表单，在设计器中就是下面截图这个样子。并且，当我运行它时，我得到了一个在客户区域具有 Aero Glass 效果的 VFP 表单！
 
