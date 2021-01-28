@@ -13,15 +13,11 @@
 Titlebar.png
 <img src="../../Picture/Titlebar.png">
 
-图片点击可在新窗口打开查看
-
 Mainform.png
-
-图片点击可在新窗口打开查看
+<img src="../../Picture/Mainform.png">
 
 VistaButtons.bmp
-
-图片点击可在新窗口打开查看
+<img src="../../Picture/VistaButtons.png">
 
 这里的“表单”类实际是一个包含所有对象的透明容器。它可以像任何其他类一样实例化为一个“表单”。
 
