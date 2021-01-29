@@ -16,11 +16,11 @@ Titlebar.png
 
 Mainform.png
 
-<img src="../../Picture/Mainform.png">
+![](Mainform.png)
 
 VistaButtons.bmp
 
-<img src="../../Picture/VistaButtons.png">
+![](VistaButtons.png)
 
 这里的“表单”类实际是一个包含所有对象的透明容器。它可以像任何其他类一样实例化为一个“表单”。
 
@@ -30,15 +30,15 @@ VistaButtons.bmp
 
 ***单击图片看大图***
 
-<img src="../../Picture/form1.png">
+![](form1.png)
 
 下一副展示了移动后的“表单”，它有部分区域盖住了右侧的对象。透过“表单”我们可以清晰的看到那些对象的文本。
 
-<img src="../../Picture/form2.png">
+![](form2.png)
 
 最后一张展示了最终效果，表单主要的部分和对象是不透明的。
 
-<img src="../../Picture/form3.png">
+![](form3.png)
 
 完成这个效果需要大约10分钟。时间很短，现在你知道如何使用滤镜并应用它达到这个效果了吧。在 XP 系统下，使用很少的代码就可以换来很现代的视觉外观： Vista Aero Glass 。
 
