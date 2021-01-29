@@ -12,7 +12,7 @@
 
 Titlebar.png
 
-<img src="../../Picture/Titlebar.png">
+![](Titlebar.png)
 
 Mainform.png
 
